@@ -7,10 +7,18 @@
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
       integrity="sha512-m/IsCzcjugdWmU+o7MIi2baMzxranuwj9uJY88W40OvD9aVf3wfl/QnLhdS0Z+VQUheZkM6weHxjEANi8Of5+w=="
       crossorigin=""></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     test
     <div id="mapid"></div>
+		<script>
+      var mymap = L.map('mapid').setView([25, 121.5], 9);
+      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+      }).addTo(mymap);
+    </script>
   </body>
 </html>
